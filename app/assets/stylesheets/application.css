@@ -1,0 +1,74 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body{
+	margin: 0px;
+	padding: 0px;
+	height:100%;
+	width:100%;
+	background-color: tan;
+}
+
+main{
+	padding:0 5vw;
+	background-color: 
+	
+}
+
+nav{
+	background-color:green;
+	padding: 0vh 5vw; font-size: 3em;
+	height: 10vh;line-height: 10vh;
+	color: white;font-family: fantasy;font-weight: bolder;margin: 0px;display: flex;justify-content: space-between;
+}
+nav a{
+	color: white;text-decoration: none;
+}
+nav a:visited{
+	color: white;text-decoration: none;
+}
+#navlinks{
+	display: inline-block;font-size: 0.5em;
+}
+
+table{
+	table-layout: fixed;
+	border: 1px solid black;
+	border-collapse: collapse;
+	width:100%;
+}
+thead>tr>th{
+	border: 2px solid white;
+	border-collapse: collapse;
+	background-color: #545353;
+	color: white;
+	font-weight: bolder;
+	text-align: left;
+}
+tbody>tr>td{
+	border: 2px solid white;
+	border-collapse: collapse;
+	font-weight: bold;
+	text-align: center;
+}
+tbody>tr:nth-child(odd){
+	background-color: black;
+	color: white;
+}
+tbody>tr:nth-child(even){
+	background-color: darkgray;
+	color: white;
+}

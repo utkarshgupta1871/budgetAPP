@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BudgetApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <nav>
+  	<div style="display: inline-block; text-align: left;">Budget Recorder</div>
+  	<div id="navlinks" style="display: inline-block;">
+	  <%= link_to "Home", root_path %> &nbsp|
+	  <% if user_signed_in? %>
+	  	<%= link_to "Sign out", destroy_user_session_path, method: :delete %> |
+	  	Hello <%= current_user.name%> !
+	  <% else %>
+	  	<%= link_to "Sign in", new_user_session_path%> |&nbsp
+	  	<%= link_to "Sign up", new_user_registration_path %>
+	  <% end %>
+	</div>
+	</nav>
+  <main>
+    <%= yield %>
+  </main>
+  </body>
+</html>

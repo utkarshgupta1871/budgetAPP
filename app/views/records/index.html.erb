@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Amount</th>
+      <th>Date</th>
+      <th>Balance</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @records.each do |record| %>
+      <tr>
+        <td><%= record.description %></td>
+        <td><%= record.amount %></td>
+        <td><%= record.created_at.in_time_zone("New Delhi") %></td>
+        <td><%= record.balance %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<% if @records.length>0 %>
+  <% last_id=@records.last.id %>
+  <%= link_to 'Click to delete last record', record_path(last_id), method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
+
+<%= link_to 'New Record', new_record_path %>

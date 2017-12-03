@@ -23,16 +23,16 @@ body{
 }
 
 main{
-	padding:0 5vw;
-	background-color: 
-	
+	padding:0 5vw;	
 }
 
 nav{
 	background-color:green;
 	padding: 0vh 5vw; font-size: 3em;
 	height: 10vh;line-height: 10vh;
-	color: white;font-family: fantasy;font-weight: bolder;margin: 0px;display: flex;justify-content: space-between;
+	color: white;
+	font-family: fantasy;
+	font-weight: bolder;margin: 0px;display: flex;justify-content: space-between;
 }
 nav a{
 	color: white;text-decoration: none;
@@ -40,6 +40,7 @@ nav a{
 nav a:visited{
 	color: white;text-decoration: none;
 }
+
 #navlinks{
 	display: inline-block;font-size: 0.5em;
 }
